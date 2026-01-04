@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { sendEmail } from "../utils/email";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -13,7 +12,6 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Basic validation
     if (!name || !email || !message) {
       setError("All fields are required");
       return;
@@ -28,17 +26,32 @@ const Contact = () => {
     setSuccess("");
     setLoading(true);
 
-    const response = await sendEmail({ name, email, message });
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, message }),
+        }
+      );
 
-    setLoading(false);
+      const data = await res.json();
 
-    if (response.success) {
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to send message");
+      }
+
       setSuccess("Message sent successfully!");
       setName("");
       setEmail("");
       setMessage("");
-    } else {
-      setError("Failed to send message. Please try again later.");
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -47,7 +60,6 @@ const Contact = () => {
       <h2 className="contact-title">Contact Us</h2>
 
       <div className="contact-box">
-        {/* LEFT FORM */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -77,7 +89,6 @@ const Contact = () => {
           </button>
         </form>
 
-        {/* RIGHT CONTENT */}
         <div className="contact-info">
           <h3>Get in Touch</h3>
           <p>
