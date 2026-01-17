@@ -77,16 +77,31 @@ html, body {
 }
 
 .nav-links li {
-  cursor: pointer;
-  transition: transform 0.3s, color 0.3s;
+  /* Removed cursor pointer since it's now on the anchor */
+  transition: transform 0.3s;
 }
 
-.nav-links li:hover {
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: block; /* Make the link fill the li */
+  width: 100%;
+  height: 100%;
+}
+
+.nav-links a:hover {
   color: #ffdd00;
-  transform: scale(1.1);
+  transform: scale(1.1); /* Optional: move scale to a if desired, or keep on li */
+}
+
+/* Fix for hover scale on li */
+.nav-links li:hover {
+    transform: scale(1.1);
 }
 
 .nav-links .active {
+  color: #ffdd00;
   border-bottom: 2px solid #ffdd00;
 }
 
