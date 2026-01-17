@@ -11,8 +11,15 @@ const career: React.FC = () => {
 
 export default career;*/
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Career: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleApply = (position: string) => {
+    navigate(`/apply/${encodeURIComponent(position)}`);
+  };
+
   return (
     <section className="career-page">
 
@@ -49,10 +56,24 @@ const Career: React.FC = () => {
         <div className="position-section">
           <h3>Open Positions</h3>
 
-          <div className="position green">1. BPO</div>
-          <div className="position red">2. CUSTOMER SUPPORT</div>
-          <div className="position blue">3. TECHNICAL SUPPORT</div>
-          <div className="position yellow">4. DATA ENTRY</div>
+          <div
+            className="position green"
+            onClick={() => handleApply("DATA ENTRY OPERATOR")}
+          >
+            1. DATA ENTRY OPERATOR
+          </div>
+          <div
+            className="position red"
+            onClick={() => handleApply("TEAM LEAD")}
+          >
+            2. TEAM LEAD
+          </div>
+          <div
+            className="position blue"
+            onClick={() => handleApply("QUALITY CHECKER")}
+          >
+            3. QUALITY CHECKER
+          </div>
         </div>
 
         {/* RIGHT - WHY WORK WITH US */}

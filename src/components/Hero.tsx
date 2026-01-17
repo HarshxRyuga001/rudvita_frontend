@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
 
@@ -15,9 +16,11 @@ const Hero: React.FC = () => {
           businesses grow online with confidence.
         </p>
 
-        <button>
-          Get Started
-        </button>
+        <Link to="/contact">
+          <button>
+            Get Started
+          </button>
+        </Link>
       </div>
 
       <div className="hero-image">

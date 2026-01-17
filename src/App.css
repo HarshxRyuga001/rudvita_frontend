@@ -331,29 +331,52 @@ body::-webkit-scrollbar {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.about-grid.reverse .about-left {
+  order: 2;
+}
+.about-grid.reverse .about-right {
+  order: 1;
 }
 
 .about-left h2,
 .about-right h2,
 .why-choose h2 {
-  font-size: 22px;
-  margin-bottom: 12px;
+  font-size: 26px;
+  margin-bottom: 16px;
 }
 
 .about-left p,
 .about-right p {
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
   color: #444;
 }
 
-.about-right img {
+.about-grid img {
   width: 100%;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.about-grid img:hover {
+  transform: scale(1.02);
+}
+
+.company-address {
+    background: #f8fbff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e0e7ff;
 }
 h1{
    animation: blackGlow 2.5s infinite alternate;

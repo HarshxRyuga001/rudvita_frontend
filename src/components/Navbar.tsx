@@ -1,31 +1,27 @@
 
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-type Props = {
-  currentPage: string;
-  onNavClick: (page: string) => void;
-};
-
-const Navbar: React.FC<Props> = ({ currentPage, onNavClick }) => {
+const Navbar: React.FC = () => {
   const navItems = ["home", "services", "about", "career", "contact"];
 
   return (
     <nav className="navbar">
       {/* BRAND */}
-      <div className="brand" onClick={() => onNavClick("home")}>
-        
+      <NavLink to="/" className="brand" style={{ textDecoration: 'none' }}>
         <span className="logo glowwhite">RUDVITA TECHNOLOGY</span>
-      </div>
+      </NavLink>
 
       {/* NAV LINKS */}
       <ul className="nav-links">
         {navItems.map((item) => (
-          <li
-            key={item}
-            className={currentPage === item ? "active" : ""}
-            onClick={() => onNavClick(item)}
-          >
-            {item.charAt(0).toUpperCase() + item.slice(1)}
+          <li key={item}>
+            <NavLink
+              to={item === "home" ? "/" : `/${item}`}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </NavLink>
           </li>
         ))}
       </ul>
