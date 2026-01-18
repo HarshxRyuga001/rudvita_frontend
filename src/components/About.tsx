@@ -13,16 +13,15 @@ const About = () => {
         <div className="about-left">
           <h3>Who We Are</h3>
           <p>
-            Rudvita Technologies is a professional web development and IT
-            services company dedicated to building modern, scalable, and
-            secure websites for businesses of all sizes. We don’t just
-            create websites—we build long-term digital solutions and
-            maintain them to ensure consistent performance and growth.
+            Rudvita Technologies is a dynamic technology-driven company offering comprehensive
+            solutions in <strong>Web Development</strong> and <strong>Business Process Outsourcing (BPO)</strong>.
+            We go beyond just building websites; we empower businesses with reliable operational support—from
+            precision Data Entry and professional Telecalling to rigorous Quality Assurance and Team Management.
           </p>
           <p>
-            Our team focuses on clean design, strong functionality, and
-            reliable maintenance so that our clients can focus on running
-            their business while we take care of their online presence.
+            Our team handles your critical digital and backend operations with accuracy and efficiency,
+            allowing you to focus entirely on your core business growth. Whether you need a robust online
+            presence or a scalable workforce, we are your dedicated partner.
           </p>
         </div>
 
@@ -42,17 +41,16 @@ const About = () => {
         <div className="about-right">
           <h3>Our Mission</h3>
           <p>
-            Our mission is to help businesses establish a strong digital
-            identity through high-quality websites, reliable maintenance,
-            and continuous technical support. We aim to deliver solutions
-            that are simple, effective, and future-ready.
+            Our mission is to be a one-stop solution for business growth—providing robust digital
+            platforms alongside efficient, scalable operational teams. We aim to deliver excellence
+            through accurate data management, proactive customer engagement, and high-quality service delivery.
           </p>
           <br />
           <h3>Our Vision</h3>
           <p>
-            To become a trusted technology partner for businesses by
-            delivering innovative, secure, and scalable web solutions that
-            drive long-term success.
+            To become the most trusted partner for businesses worldwide, recognized for our ability to
+            seamlessly integrate technology, skilled professionals, and efficient processes to drive
+            sustainable success.
           </p>
         </div>
       </div>
@@ -60,11 +58,11 @@ const About = () => {
       <div className="why-choose">
         <h3>Why Choose Rudvita Technologies?</h3>
         <ul>
-          <li>Professional and modern website designs</li>
-          <li>Reliable website maintenance & support</li>
-          <li>Client-focused and transparent process</li>
-          <li>Scalable solutions for growing businesses</li>
-          <li>Long-term technical partnership</li>
+          <li>Comprehensive Web & BPO Solutions under one roof</li>
+          <li>Skilled Workforce (Data Entry, Telecallers, Team Leads)</li>
+          <li>Rigorous Quality Assurance & Accuracy standards</li>
+          <li>Scalable operational support for growing businesses</li>
+          <li>Commitment to transparency and long-term partnership</li>
         </ul>
       </div>
 
@@ -75,9 +73,9 @@ const About = () => {
             <h3>Our Location</h3>
             <p>
               <strong>Rudvita Technologies</strong><br />
-              123, Tech Innovation Park,<br />
-              Sector 62, Noida,<br />
-              Uttar Pradesh - 201301
+              1st floor Purshottam East end tower near VK traders,<br />
+              mp nagar zone 2,<br />
+              Bhopal, Madhya Pradesh - 462011
             </p>
           </div>
         </div>
