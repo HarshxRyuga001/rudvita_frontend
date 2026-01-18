@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       {/* BRAND */}
       <NavLink to="/" className="brand" style={{ textDecoration: 'none' }} onClick={closeMenu}>
+        <img src="/logo.jpeg" alt="Rudvita Tech Logo" className="brand-logo" />
         <span className="logo glowwhite">RUDVITA TECHNOLOGY</span>
       </NavLink>
 
